@@ -1,0 +1,17 @@
+.employees {
+    display: flex;
+    margin: 20px;
+    background-color: aliceblue;
+    border-radius: 12px;
+    flex-wrap: wrap;
+
+}
+
+.employee {
+    padding: 10px;
+    background-color: aquamarine;
+    border-radius: 12px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+}

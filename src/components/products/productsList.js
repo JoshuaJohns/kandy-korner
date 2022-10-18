@@ -50,9 +50,9 @@ export const ProductsList = () => {
         {
             KandyUserObject.staff
                 ? <>
+                    <button onClick={() => { setHighPriceProducts(false) }}>All Product</button>
                     <button onClick={() => { setHighPriceProducts(true) }}>High price</button>
                     <button onClick={() => navigate("/products/create")}>Add Product</button>
-                    <button onClick={() => { setHighPriceProducts(false) }}>All Product</button>
 
                 </>
                 : <>

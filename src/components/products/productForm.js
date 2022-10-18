@@ -133,7 +133,7 @@ export const NewProductForm = () => {
                         onChange={
                             (evt) => {
                                 const copy = { ...userChoices }
-                                copy.price = parseInt(evt.target.value)
+                                copy.price = Number(evt.target.value)
                                 update(copy)
                             }
                         } />
