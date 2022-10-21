@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import "./Locations.css"
 
 
 export const LocationList = () => {
@@ -17,16 +18,19 @@ export const LocationList = () => {
 
     return <>
         <h2>List of Store Locations</h2>
-        {locations.map((location) => {
-            return <section className="locations-sec" key={location.id}>
-                <div><img className="locations-img" src={`../../images/${location.image}`} alt="Store" /></div>
-                <ul className="locations-ul">
-                    <li className="locations-li">{location.name}</li>
-                    <li className="locations-li"> Address: {location.address}</li>
-                    <li className="locations-li">{location.squareFootage} Squarefoot</li>
-                </ul>
-            </section>
-        })}
+        <div className="locations-div">
+            {locations.map((location) => {
+                return <section className="locations-sec" key={location.id}>
+                    <div><img className="locations-img" src={`../../images/${location.image}`} alt="Store" /></div>
+                    <ul className="locations-ul">
+                        <li className="locations-li">{location.name}</li>
+                        <li className="locations-li"> Address: {location.address}</li>
+                        <li className="locations-li">{location.squareFootage} Squarefoot</li>
+                    </ul>
+                </section>
+
+            })}
+        </div>
     </>
 
 }

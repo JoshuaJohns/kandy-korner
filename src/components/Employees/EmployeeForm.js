@@ -50,8 +50,8 @@ export const NewEmployeeForm = () => {
             body: JSON.stringify(userObject)
         })
             .then(res => res.json())
-            .then((userArray) => {
-                employeeObj.userId = userArray.id
+            .then((userObject) => {
+                employeeObj.userId = userObject.id
             })
             .then(() => {
                 fetch(`http://localhost:8088/employees`, {
@@ -175,7 +175,7 @@ export const NewEmployeeForm = () => {
                         onChange={
                             (evt) => {
                                 const copy = { ...userChoices }
-                                copy.payRate = parseInt(evt.target.value)
+                                copy.payRate = Number(evt.target.value)
                                 update(copy)
                             }
                         } />

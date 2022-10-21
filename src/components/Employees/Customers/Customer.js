@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import { EdditLoyaltyNumber } from "./EdditLoyaltyNumber"
 
 export const Customer = ({ id, fullName, email }) => {
     return <section className="employee">

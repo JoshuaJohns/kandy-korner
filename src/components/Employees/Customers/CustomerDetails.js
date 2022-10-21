@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
+import "./Customer.css"
+
 
 export const CustomerDetails = () => {
     const { customerId } = useParams()
     const [customer, updateCustomer] = useState([])
+    const navigate = useNavigate()
 
     useEffect(
         () => {
@@ -16,9 +19,12 @@ export const CustomerDetails = () => {
         }, [customerId]
     )
 
+
     return <section className="customer">
-        <header className="customer-header">{customer?.user?.fullName}</header>
-        <div>Email: {customer?.user?.email}</div>
+        <header className="customer-header">{customer?.user?.fullName} </header>
+        <div>Email: {customer?.user?.email} </div>
         <div>Loyalty Number: {customer.loyaltyNumber}</div>
+        <button className="update-loyalty-btn" onClick={() => { navigate(`/customer/${customer.id}/edit`) }}>Update Loyalty Number</button>
+
     </section>
 }

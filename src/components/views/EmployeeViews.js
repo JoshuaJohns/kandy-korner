@@ -1,12 +1,13 @@
 import { Outlet, Route, Routes } from "react-router-dom"
 import { LocationList } from "../locations/LocationsList"
-import { ProductsList } from "../products/productsList"
-import { NewProductForm } from "../products/productForm"
+import { ProductsList } from "../Employees/products/productsList"
+import { NewProductForm } from "../Employees/products/productForm"
 import { EmployeesList } from "../Employees/EmployeesList"
 import { EmployeeDetails } from "../Employees/EmployeeDetails"
 import { NewEmployeeForm } from "../Employees/EmployeeForm"
 import { CustomerList } from "../Employees/Customers/CustomerList"
 import { CustomerDetails } from "../Employees/Customers/CustomerDetails"
+import { EdditLoyaltyNumber } from "../Employees/Customers/EdditLoyaltyNumber"
 export const EmployeeViews = () => {
     return <>
         <Routes>
@@ -27,6 +28,7 @@ export const EmployeeViews = () => {
                 <Route path="employee/create" element={<NewEmployeeForm />} />
                 <Route path="employees/:employeeId" element={<EmployeeDetails />} />
                 <Route path="customer/:customerId" element={<CustomerDetails />} />
+                <Route path="customer/:customerId/edit" element={<EdditLoyaltyNumber />} />
                 {/* <Route path="ticket/create" element={<TicketForm />} /> */}
             </Route>
         </Routes>

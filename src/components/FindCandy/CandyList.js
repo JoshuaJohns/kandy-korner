@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react"
-// import "./Candy.css"
+import { useNavigate } from "react-router-dom"
+import "./Candy.css"
 
 
 export const CandyList = ({ seachTermState }) => {
     const [products, setProducts] = useState([])
     const [filteredProducts, setFilteredProducts] = useState([])
+    const navigate = useNavigate()
 
 
 
@@ -39,6 +41,7 @@ export const CandyList = ({ seachTermState }) => {
                     <ul className="products-ul">
                         <li className="products-li">{product.name}</li>
                         <li className="products-li">${product.price}</li>
+                        <button onClick={() => navigate(`/findCandy/${product.id}`)}>Purchase</button>
                     </ul>
                 </div>
             })}
