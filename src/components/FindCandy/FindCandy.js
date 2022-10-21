@@ -3,6 +3,7 @@ export const FindCandy = ({ setterFunction }) => {
         {
             <div>
                 <input
+                    className="input-find"
                     onChange={
                         (event) => {
                             setterFunction(event.target.value)

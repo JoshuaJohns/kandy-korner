@@ -1,10 +1,10 @@
 import { useState } from "react"
-import { FindCandy } from "../Customers/FindCandy"
-import { CandyList } from "../Customers/CandyList"
+import { FindCandy } from "./FindCandy"
+import { CandyList } from "./CandyList"
 
 
 
-export const TicketContainer = () => {
+export const FindCandyContainer = () => {
     const [searchTerms, setSearchTerms] = useState("")
 
 

@@ -1,0 +1,40 @@
+.locations-img {
+    height: 200px;
+    width: 400px;
+    margin: 10px;
+
+    border-radius: 12px;
+}
+
+.locations-sec {
+    /* display: flex;
+    flex-wrap: wrap; */
+    margin: 20px;
+    width: 420px;
+    border: solid;
+    border-color: black;
+    border-width: 10px;
+
+}
+
+.locations-ul {
+    margin-top: 20px;
+    font-size: 25px;
+    /* margin-left: 50px; */
+
+}
+
+.locations-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+body {
+    background-color: rgb(247, 239, 239);
+}
+
+h2 {
+    font-size: 35px;
+}
